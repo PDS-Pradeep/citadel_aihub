@@ -3,28 +3,31 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "environmentName": {
-      "value": "${AZURE_ENV_NAME}"
+      "value": "hbai-lz2"
     },
     "location": {
-      "value": "${AZURE_LOCATION}"
+      "value": "swedencentral"
     },
-    "entraAuth": {
-      "value": "${AZURE_ENTRA_AUTH}"
+    "resourceGroupName": {
+      "value": "rg-hbai-lz2"
     },
-    "entraTenantId": {
-      "value": "${AZURE_TENANT_ID}"
+    "useExistingVnet": {
+      "value": true
     },
-    "entraClientId": {
-      "value": "${AZURE_CLIENT_ID}"
+    "existingVnetRG": {
+      "value": "rg-hbai-lz2"
     },
-    "entraAudience": {
-      "value": "${AZURE_AUDIENCE}"
+    "vnetName": {
+      "value": "sw-hbai-vnet-01"
     },
-    "deploymentCapacity": {
-      "value": "${OPENAI_CAPACITY}",
-      "metadata": {
-        "description": "The OpenAI endpoints capacity (in thousands of tokens per minute)."
-      }
+    "languageServiceExternalNetworkAccess": {
+      "value": "Disabled"
+    },
+    "aiContentSafetyExternalNetworkAccess": {
+      "value": "Disabled"
+    },
+    "openAIExternalNetworkAccess": {
+      "value": "Disabled"
     }
   }
 }

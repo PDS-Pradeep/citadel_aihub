@@ -10,7 +10,7 @@ param environmentName string
 
 @minLength(1)
 @description('Primary location for all resources (filtered on available regions for Azure Open AI Service).')
-@allowed([ 'uaenorth', 'southafricanorth', 'westeurope', 'southcentralus', 'australiaeast', 'canadaeast', 'eastus', 'eastus2', 'francecentral', 'japaneast', 'northcentralus', 'swedencentral', 'switzerlandnorth', 'uksouth' ])
+@allowed(['swedencentral' ])
 param location string
 
 @description('Tags to be applied to resources.')
@@ -103,16 +103,16 @@ param apimRouteTableName string = ''
 
 // VNet address space and subnet prefixes
 @description('Virtual Network address space.')
-param vnetAddressPrefix string = '10.170.0.0/24'
+param vnetAddressPrefix string = '172.18.220.0/24'
 
 @description('API Management subnet address range.')
-param apimSubnetPrefix string = '10.170.0.0/26'
+param apimSubnetPrefix string = '172.18.220.0/26'
 
 @description('Private Endpoint subnet address range.')
-param privateEndpointSubnetPrefix string = '10.170.0.64/26'
+param privateEndpointSubnetPrefix string = '172.18.220.64/26'
 
 @description('Function App subnet address range.')
-param functionAppSubnetPrefix string = '10.170.0.128/26'
+param functionAppSubnetPrefix string = '172.18.220.128/26'
 
 // DNS ZONE PARAMETERS - DNS zone configuration for private endpoints (for use with existing VNet)
 @description('Resource group containing the DNS zones (only used with existing VNet).')
@@ -256,71 +256,9 @@ param logicContentShareName string = 'usage-logic-content'
 
 @description('OpenAI instances configuration - add more instances by modifying this object.')
 param openAiInstances object = {
-  openAi1: {
-    name: 'openai1'
-    location: 'eastus'
-    deployments: [
-      {
-        name: 'chat'
-        model: {
-          format: 'OpenAI'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
-        }
-        sku: {
-          name: 'Standard'
-          capacity: deploymentCapacity
-        }
-        
-      }
-      {
-        name: 'embedding'
-        model: {
-          format: 'OpenAI'
-          name: 'text-embedding-3-large'
-          version: '1'
-        }
-        sku: {
-          name: 'Standard'
-          capacity: deploymentCapacity
-        }
-      }
-      {
-        name: 'gpt-4o'
-        model: {
-          format: 'OpenAI'
-          name: 'gpt-4o'
-          version: '2024-05-13'
-        }
-        sku: {
-          name: 'GlobalStandard'
-          capacity: deploymentCapacity
-        }
-      }
-    ]
-  }
-  openAi2: {
-    name: 'openai2'
-    location: 'northcentralus'
-    deployments: [
-      {
-        name: 'chat'
-        model: {
-          format: 'OpenAI'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
-        }
-        sku: {
-          name: 'Standard'
-          capacity: deploymentCapacity
-        }
-        
-      }
-    ]
-  }
   openAi3: {
     name: 'openai3'
-    location: 'eastus2'
+    location: 'swedencentral'
     deployments: [
       {
         name: 'chat'

@@ -1,0 +1,976 @@
+{
+  "generatedAt": "2026-01-24T17:06:36.288424Z",
+  "resourceGroup": "rg-hbai-lz2",
+  "resources": [
+    {
+      "name": "privatelink.servicebus.windows.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.servicebus.windows.net",
+      "tags": {
+        "azd-service-name": "privatelink.servicebus.windows.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "id-apim-oygf3jjanv6um",
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-apim-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "id-apim-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.blob.core.windows.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net",
+      "tags": {
+        "azd-service-name": "privatelink.blob.core.windows.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.cognitiveservices.azure.com",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.cognitiveservices.azure.com",
+      "tags": {
+        "azd-service-name": "privatelink.cognitiveservices.azure.com"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.file.core.windows.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net",
+      "tags": {
+        "azd-service-name": "privatelink.file.core.windows.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.vaultcore.azure.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+      "tags": {
+        "azd-service-name": "privatelink.vaultcore.azure.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.table.core.windows.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.table.core.windows.net",
+      "tags": {
+        "azd-service-name": "privatelink.table.core.windows.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.openai.azure.com",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com",
+      "tags": {
+        "azd-service-name": "privatelink.openai.azure.com"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.queue.core.windows.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.queue.core.windows.net",
+      "tags": {
+        "azd-service-name": "privatelink.queue.core.windows.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.monitor.azure.com",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.monitor.azure.com",
+      "tags": {
+        "azd-service-name": "privatelink.monitor.azure.com"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.documents.azure.com",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.documents.azure.com",
+      "tags": {
+        "azd-service-name": "privatelink.documents.azure.com"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.azure-api.net",
+      "type": "Microsoft.Network/privateDnsZones",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.azure-api.net",
+      "tags": {
+        "azd-service-name": "privatelink.azure-api.net"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "nsg-functionapp-oygf3jjanv6um",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkSecurityGroups/nsg-functionapp-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "nsg-functionapp-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "nsg-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkSecurityGroups/nsg-pe-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "nsg-pe-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "rt-apim-oygf3jjanv6um",
+      "type": "Microsoft.Network/routeTables",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/routeTables/rt-apim-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "rt-apim-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "nsg-apim-oygf3jjanv6um",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkSecurityGroups/nsg-apim-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "nsg-apim-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "vnet-oygf3jjanv6um",
+      "type": "Microsoft.Network/virtualNetworks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/virtualNetworks/vnet-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "vnet-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.azure-api.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.azure-api.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.queue.core.windows.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.queue.core.windows.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.cognitiveservices.azure.com/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.cognitiveservices.azure.com/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.file.core.windows.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.vaultcore.azure.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.table.core.windows.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.table.core.windows.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.monitor.azure.com/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.monitor.azure.com/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.blob.core.windows.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.openai.azure.com/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.openai.azure.com/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.documents.azure.com/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.documents.azure.com/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "privatelink.servicebus.windows.net/privateDnsZoneLink",
+      "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateDnsZones/privatelink.servicebus.windows.net/virtualNetworkLinks/privateDnsZoneLink",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "ampls-monitoring",
+      "type": "microsoft.insights/privateLinkScopes",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/microsoft.insights/privateLinkScopes/ampls-monitoring",
+      "tags": {},
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cosmos-oygf3jjanv6um",
+      "type": "Microsoft.DocumentDB/databaseAccounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.DocumentDB/databaseAccounts/cosmos-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "cosmos-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "evhns-oygf3jjanv6um",
+      "type": "Microsoft.EventHub/namespaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.EventHub/namespaces/evhns-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "evhns-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-consafety-oygf3jjanv6um",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.CognitiveServices/accounts/cog-consafety-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "cog-consafety-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-language-oygf3jjanv6um",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.CognitiveServices/accounts/cog-language-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "cog-language-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "log-oygf3jjanv6um",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.OperationalInsights/workspaces/log-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "log-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "openai1-oygf3jjanv6um",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "eastus",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.CognitiveServices/accounts/openai1-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "openai1-oygf3jjanv6um"
+      },
+      "publicEndpoint": "https://openai1-oygf3jjanv6um.openai.azure.com",
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-consafety-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cog-consafety-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-consafety-pe-oygf3jjanv6um.nic.362f5621-7089-4f8e-b445-60cac71f8e04",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cog-consafety-pe-oygf3jjanv6um.nic.362f5621-7089-4f8e-b445-60cac71f8e04",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-language-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cog-language-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-0-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cog-openai-pe-0-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-language-pe-oygf3jjanv6um.nic.84f08952-240d-4613-a8c4-b2ccabef85ef",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cog-language-pe-oygf3jjanv6um.nic.84f08952-240d-4613-a8c4-b2ccabef85ef",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "evhns-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/evhns-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-0-oygf3jjanv6um.nic.48765cbb-03ec-42d9-a637-cf20df8674cc",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cog-openai-pe-0-oygf3jjanv6um.nic.48765cbb-03ec-42d9-a637-cf20df8674cc",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "appi-apim-oygf3jjanv6um",
+      "type": "Microsoft.Insights/components",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Insights/components/appi-apim-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "appi-apim-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "appi-func-oygf3jjanv6um",
+      "type": "Microsoft.Insights/components",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Insights/components/appi-func-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "appi-func-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "evhns-pe-oygf3jjanv6um.nic.0ce9364e-b2a3-4b7d-a6fd-17798f485380",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/evhns-pe-oygf3jjanv6um.nic.0ce9364e-b2a3-4b7d-a6fd-17798f485380",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "openai2-oygf3jjanv6um",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "northcentralus",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.CognitiveServices/accounts/openai2-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "openai2-oygf3jjanv6um"
+      },
+      "publicEndpoint": "https://openai2-oygf3jjanv6um.openai.azure.com",
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cosmos-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cosmos-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "ampls-monitoring-pe",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/ampls-monitoring-pe",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cosmos-pe-oygf3jjanv6um.nic.74cab1dc-e922-4d9e-869b-ec3ed1242ac2",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cosmos-pe-oygf3jjanv6um.nic.74cab1dc-e922-4d9e-869b-ec3ed1242ac2",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "ampls-monitoring-pe.nic.eecab5f0-6944-4860-b7aa-25d17b7fc282",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/ampls-monitoring-pe.nic.eecab5f0-6944-4860-b7aa-25d17b7fc282",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-1-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cog-openai-pe-1-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-1-oygf3jjanv6um.nic.befcd56b-338c-4df4-a763-b7fbae5042d3",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cog-openai-pe-1-oygf3jjanv6um.nic.befcd56b-338c-4df4-a763-b7fbae5042d3",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "openai3-oygf3jjanv6um",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.CognitiveServices/accounts/openai3-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "openai3-oygf3jjanv6um"
+      },
+      "publicEndpoint": "https://openai3-oygf3jjanv6um.openai.azure.com",
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-2-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/cog-openai-pe-2-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "cog-openai-pe-2-oygf3jjanv6um.nic.058ed7a0-4b58-4533-b212-fa1bc784b21c",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/cog-openai-pe-2-oygf3jjanv6um.nic.058ed7a0-4b58-4533-b212-fa1bc784b21c",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "apim-oygf3jjanv6um",
+      "type": "Microsoft.ApiManagement/service",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.ApiManagement/service/apim-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "apim-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "id-usage-oygf3jjanv6um",
+      "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-usage-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "id-usage-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "funcusageoygf3jjanv6um",
+      "type": "Microsoft.Storage/storageAccounts",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Storage/storageAccounts/funcusageoygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "funcusageoygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stqueue-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/stqueue-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "sttable-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/sttable-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stfile-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/stfile-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stblob-pe-oygf3jjanv6um",
+      "type": "Microsoft.Network/privateEndpoints",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/privateEndpoints/stblob-pe-oygf3jjanv6um",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stqueue-pe-oygf3jjanv6um.nic.81c65fb9-502c-4a1c-a1cc-8f29bd854429",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/stqueue-pe-oygf3jjanv6um.nic.81c65fb9-502c-4a1c-a1cc-8f29bd854429",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "sttable-pe-oygf3jjanv6um.nic.e0e9e69f-a5e8-429b-b348-55e375f61e45",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/sttable-pe-oygf3jjanv6um.nic.e0e9e69f-a5e8-429b-b348-55e375f61e45",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stfile-pe-oygf3jjanv6um.nic.d3596ccb-1af7-454e-8402-9cbbb369a060",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/stfile-pe-oygf3jjanv6um.nic.d3596ccb-1af7-454e-8402-9cbbb369a060",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "stblob-pe-oygf3jjanv6um.nic.5c7d2c38-a7b0-4853-8c1a-828f079942ec",
+      "type": "Microsoft.Network/networkInterfaces",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Network/networkInterfaces/stblob-pe-oygf3jjanv6um.nic.5c7d2c38-a7b0-4853-8c1a-828f079942ec",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "Failure Anomalies - appi-func-oygf3jjanv6um",
+      "type": "microsoft.alertsmanagement/smartDetectorAlertRules",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/microsoft.alertsmanagement/smartDetectorAlertRules/Failure Anomalies - appi-func-oygf3jjanv6um",
+      "tags": {},
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "Failure Anomalies - appi-apim-oygf3jjanv6um",
+      "type": "microsoft.alertsmanagement/smartDetectorAlertRules",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "global",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/microsoft.alertsmanagement/smartDetectorAlertRules/Failure Anomalies - appi-apim-oygf3jjanv6um",
+      "tags": {},
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "hosting-plan-logic-usage-oygf3jjanv6um",
+      "type": "Microsoft.Web/serverFarms",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Web/serverFarms/hosting-plan-logic-usage-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "hosting-plan-logic-usage-oygf3jjanv6um"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "logic-usage-oygf3jjanv6um",
+      "type": "Microsoft.Web/sites",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Web/sites/logic-usage-oygf3jjanv6um",
+      "tags": {
+        "SecurityControl": "Ignore",
+        "azd-env-name": "hbai-lz2",
+        "azd-service-name": "usageProcessingLogicApp"
+      },
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "azuremonitorlogs",
+      "type": "Microsoft.Web/connections",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.Web/connections/azuremonitorlogs",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    },
+    {
+      "name": "funcusageoygf3jjanv6um-f91c8490-c999-4ec0-9791-034965461ae8",
+      "type": "Microsoft.EventGrid/systemTopics",
+      "resourceGroup": "rg-hbai-lz2",
+      "location": "swedencentral",
+      "id": "/subscriptions/9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583/resourceGroups/rg-hbai-lz2/providers/Microsoft.EventGrid/systemTopics/funcusageoygf3jjanv6um-f91c8490-c999-4ec0-9791-034965461ae8",
+      "tags": null,
+      "publicEndpoint": null,
+      "vnet": null,
+      "subnet": null,
+      "privateEndpoints": []
+    }
+  ]
+}

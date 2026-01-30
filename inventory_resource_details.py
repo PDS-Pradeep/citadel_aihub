@@ -6,67 +6,8 @@ from datetime import datetime
 from typing import Dict, List, Any
 from pathlib import Path
 import json
-import subprocess
-import sys
 
 
-# -------------------------------------------------
-# SET ENV VALUES HERE
-# -------------------------------------------------
-AZD_ENV_NAME = "dev"
-
-AZD_ENV_VALUES = {
-    "AZURE_ENV_NAME": "hbai-lz3",
-    "AZURE_LOCATION": "swedencentral",
-    "AZURE_SUBSCRIPTION_ID": "9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583",
-
-    "VNET_NAME": "sw-hbai-vnet-01",
-    "EXISTING_VNET_RG": "rg-hbai-lz3",
-    "VNET_ADDRESS_PREFIX": "172.18.220.0/24",
-
-    "APIM_SUBNET_NAME": "apim-subnet",
-    "APIM_SUBNET_PREFIX": "172.18.220.0/26",
-
-    "PRIVATE_ENDPOINT_SUBNET_NAME": "private-endpoint-subnet",
-    "PRIVATE_ENDPOINT_SUBNET_PREFIX": "172.18.220.64/26",
-
-    "FUNCTION_APP_SUBNET_NAME": "functionapp-subnet",
-    "FUNCTION_APP_SUBNET_PREFIX": "172.18.220.128/26",
-
-    "APIM_NAME": "apim-gpeat2any457u",
-    "APIM_GATEWAY_URL": "https://apim-gpeat2any457u.azure-api.net",
-    "APIM_AOI_PATH": "openai",
-}
-
-def setup_azd_environment():
-    print(f"Creating/selecting azd environment: {AZD_ENV_NAME}")
-    run_cmd(["azd", "env", "new", AZD_ENV_NAME, "--no-prompt"])
-    run_cmd(["azd", "env", "select", AZD_ENV_NAME])
-
-    print("Setting azd environment values:")
-    for k, v in AZD_ENV_VALUES.items():
-        print(f"  {k} = {v}")
-        run_cmd(["azd", "env", "set", k, v])
-
-def load_azd_env() -> Dict[str, str]:
-    result = run_cmd_capture(["azd", "env", "get-values"])
-
-    if result.returncode != 0:
-        raise RuntimeError(
-            f"Failed to load azd environment values\n{result.stderr}"
-        )
-
-    env = {}
-    for line in result.stdout.splitlines():
-        if "=" in line:
-            k, v = line.split("=", 1)
-            env[k.strip()] = v.strip().strip('"').strip("'")
-
-    return env
-
-# -------------------------------------------------
-# Azure CLI discovery 
-# -------------------------------------------------
 def find_az_cli() -> str:
     for exe in ("az", "az.cmd"):
         path = shutil.which(exe)
@@ -77,6 +18,9 @@ def find_az_cli() -> str:
 
 AZ_CLI = find_az_cli()
 
+
+import subprocess
+import sys
 
 def run_cmd(cmd):
     process = subprocess.Popen(
@@ -103,9 +47,6 @@ def run_cmd_capture(cmd):
     )
     return result
 
-# -------------------------------------------------
-# Azure CLI helpers
-# -------------------------------------------------
 def run_az_json(cmd: List[str]) -> Any:
     result = run_cmd_capture([AZ_CLI] + cmd + ["-o", "json"])
 
@@ -130,9 +71,6 @@ def run_az_raw(cmd: List[str]):
         print("STDERR:", result.stderr)
         raise RuntimeError("Azure CLI command failed")
 
-# -------------------------------------------------
-# Inventory logic
-# -------------------------------------------------
 def set_subscription(subscription_id: str):
     run_az_raw([
         "account", "set",
@@ -210,10 +148,12 @@ def extract_network_info(resource: Dict) -> Dict:
     # Public endpoint + network access (Cognitive / OpenAI)
     # -------------------------------------------------
 
+    # Azure OpenAI accounts (endpoint always exists)
     if rtype == "Microsoft.CognitiveServices/accounts" and "openai" in name:
         network["publicEndpoint"] = f"https://{resource['name']}.openai.azure.com"
         network["publicNetworkAccess"] = "Enabled"  # logical endpoint exists
 
+    # Other Cognitive Services (Content Safety, Language, etc.)
     elif rtype == "Microsoft.CognitiveServices/accounts":
         net_access = get_cognitive_network_access(rid)
         network["publicNetworkAccess"] = net_access.get("publicNetworkAccess")
@@ -322,25 +262,49 @@ def write_outputs(inventory: List[Dict], resource_group: str):
                 "subnet": r["subnet"]
             })
 
+def write_infra_parameters(azd_env: dict):
+    params = {
+        "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+            "environmentName": {
+                "value": azd_env["AZURE_ENV_NAME"]
+            },
+            "location": {
+                "value": azd_env["AZURE_LOCATION"]
+            },
 
-def copy_parameters_to_infra(
-    source_file: str = "parameters.json",
-    target_dir: str = "infra",
-    target_file: str = "main.parameters.json"
-):
-    # Read local parameters.json
-    with open(source_file, "r") as f:
-        parameters = json.load(f)
+            "resourceGroupName": {
+                "value": azd_env.get("EXISTING_VNET_RG")
+            },
 
-    # Ensure infra directory exists
-    Path(target_dir).mkdir(parents=True, exist_ok=True)
+            "useExistingVnet": {
+                "value": True
+            },
+            "existingVnetRG": {
+                "value": azd_env.get("EXISTING_VNET_RG")
+            },
+            "vnetName": {
+                "value": azd_env.get("VNET_NAME")
+            },
 
-    # Write to infra/main.parameters.json
-    target_path = Path(target_dir) / target_file
-    with open(target_path, "w") as f:
-        json.dump(parameters, f, indent=2)
+            "languageServiceExternalNetworkAccess": {
+                "value": "Disabled"
+            },
+            "aiContentSafetyExternalNetworkAccess": {
+                "value": "Disabled"
+            },
+            "openAIExternalNetworkAccess": {
+                "value": "Disabled"
+            }
+        }
+    }
 
-    print(f"Copied {source_file} → {target_path}")
+    Path("infra").mkdir(exist_ok=True)
+    with open("infra/main.parameters.json", "w") as f:
+        json.dump(params, f, indent=2)
+
+    print("Generated infra/main.parameters.json with all required parameters")
 
 def get_latest_subscription_deployment() -> str:
     result = run_cmd([
@@ -355,66 +319,17 @@ def get_latest_subscription_deployment() -> str:
 
     return result.stdout.strip()
 
-def get_deployment_portal_link(subscription_id: str, deployment_name: str) -> str:
-    return (
-        "https://portal.azure.com/#view/HubsExtension/DeploymentDetailsBlade/overview/id/"
-        f"%2Fsubscriptions%2F{subscription_id}"
-        "%2Fproviders%2FMicrosoft.Resources%2Fdeployments%2F"
-        f"{deployment_name}"
-    )
-
 def main():
     print("Starting Azure resource inventory collection")
 
-    setup_azd_environment()
-
-    azd_env = load_azd_env()
-    print("Loaded azd environment values", azd_env )
-
-    copy_parameters_to_infra()
-    
-    subscription_id = azd_env.get("AZURE_SUBSCRIPTION_ID")
-    if not subscription_id:
-        raise RuntimeError("AZURE_SUBSCRIPTION_ID not found in azd environment")
-
-    print("Running azd up to create infrastructure and resource group")
-
-    result = run_cmd(["azd", "up"])
-
-    if result != 0:
-        print("azd up STDOUT:")
-        print(result)
-        raise RuntimeError("azd up failed")
-
-    print(f"Using resource group: {azd_env}")    
-    try:
-        deployment_name = get_latest_subscription_deployment()
-        portal_link = get_deployment_portal_link(subscription_id, deployment_name)
-
-        print("Monitor deployment here:")
-        print(portal_link)
-    except Exception as e:
-        print("Warning: Unable to determine deployment portal link")
-        print(str(e))
-
-    if "AZURE_RESOURCE_GROUP" in azd_env:
-        resource_group = azd_env["AZURE_RESOURCE_GROUP"]
-    elif "EXISTING_VNET_RG" in azd_env:
-        resource_group = azd_env["EXISTING_VNET_RG"]
-    else:
-        raise RuntimeError(
-            "No resource group found in AZD environment "
-            "(expected AZURE_RESOURCE_GROUP or EXISTING_VNET_RG)"
-        )
-
-    print(f"Using subscription: {subscription_id}")
-    print(f"Using resource group: {resource_group}")
     subscription_id = "fcaf66af-3bf2-4d80-8301-271f841abb7c"    
     resource_group = "rg-hbai-lz1"      
     output_file = "azure_deep_inventory.xlsx"
 
+    # 6. Set subscription context
     set_subscription(subscription_id)
 
+    # 7. Inventory
     inventory = build_inventory(resource_group)
     write_outputs(inventory, resource_group)
 

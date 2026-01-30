@@ -16,6 +16,7 @@
         "CostCenter": "RND"
       }
     },
+
     "resourceGroupName": {
       "value": "rg-hbai-lz3"
     },
@@ -61,6 +62,7 @@
     "aiContentSafetyName": {
       "value": ""
     },
+
     "vnetName": {
       "value": "sw-hbai-vnet-01"
     },
@@ -70,6 +72,7 @@
     "existingVnetRG": {
       "value": "rg-hbai-lz2"
     },
+
     "apimSubnetName": {
       "value": ""
     },
@@ -79,6 +82,7 @@
     "functionAppSubnetName": {
       "value": ""
     },
+
     "apimNsgName": {
       "value": ""
     },
@@ -91,6 +95,7 @@
     "apimRouteTableName": {
       "value": ""
     },
+
     "vnetAddressPrefix": {
       "value": "172.18.220.0/24"
     },
@@ -103,12 +108,14 @@
     "functionAppSubnetPrefix": {
       "value": "172.18.220.128/26"
     },
+
     "dnsZoneRG": {
       "value": ""
     },
     "dnsSubscriptionId": {
       "value": ""
     },
+
     "storageBlobPrivateEndpointName": {
       "value": ""
     },
@@ -139,6 +146,7 @@
     "apimV2PrivateEndpointName": {
       "value": ""
     },
+
     "apimNetworkType": {
       "value": "External"
     },
@@ -166,6 +174,7 @@
     "useAzureMonitorPrivateLinkScope": {
       "value": true
     },
+
     "createAppInsightsDashboard": {
       "value": false
     },
@@ -190,6 +199,7 @@
     "entraAuth": {
       "value": false
     },
+
     "apimSku": {
       "value": "Developer"
     },
@@ -217,12 +227,14 @@
     "aiContentSafetySkuName": {
       "value": "S0"
     },
+
     "functionContentShareName": {
       "value": "usage-function-content"
     },
     "logicContentShareName": {
       "value": "usage-logic-content"
     },
+
     "openAiInstances": {
       "value": {
         "openAi3": {
@@ -257,6 +269,7 @@
         }
       }
     },
+
     "aiSearchInstances": {
       "value": [
         {
@@ -271,6 +284,7 @@
         }
       ]
     },
+
     "entraTenantId": {
       "value": ""
     },

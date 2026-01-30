@@ -409,8 +409,6 @@ def main():
 
     print(f"Using subscription: {subscription_id}")
     print(f"Using resource group: {resource_group}")
-    subscription_id = "fcaf66af-3bf2-4d80-8301-271f841abb7c"    
-    resource_group = "rg-hbai-lz1"      
     output_file = "azure_deep_inventory.xlsx"
 
     set_subscription(subscription_id)

@@ -86,8 +86,8 @@ azd env get-values
 Confirm that all values originate from parameters.json and that no local overrides are present.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
 
-###
 > ## 🏰 **NEW: AI Citadel Governance Hub v1 - Now in Preview!**
 > 
 > **The next evolution of AI Hub Gateway is here!** AI Citadel Governance Hub expands enterprise AI governance with three powerful pillars:

@@ -87,7 +87,7 @@ Confirm that all values originate from parameters.json and that no local overrid
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+###
 > ## 🏰 **NEW: AI Citadel Governance Hub v1 - Now in Preview!**
 > 
 > **The next evolution of AI Hub Gateway is here!** AI Citadel Governance Hub expands enterprise AI governance with three powerful pillars:

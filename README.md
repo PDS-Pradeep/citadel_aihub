@@ -1,3 +1,88 @@
+## ⚙️ Deployment Configuration & Execution
+
+### 🔧 Step 1: Configure `parameters.json`
+
+Before deploying the **AI Hub Gateway Landing Zone**, update the required values in `parameters.json` to match your target environment.
+
+#### 🔑 Required Parameters to Review
+
+You **must** verify or modify the following values:
+
+##### Environment & Location
+- `environmentName` (e.g., `hbai-lz4`)
+- `location` (e.g., `swedencentral`)
+- `azureSubscriptionId`
+
+##### Resource Scoping
+- `resourceGroupName`
+- `existingVnetRG` (if reusing an existing VNet)
+- `vnetName`
+
+##### Globally Unique Services
+The following services **require globally unique names across Azure**. Ensure these are updated per environment:
+
+- `apimServiceName`
+- `storageAccountName`
+- `cosmosDbAccountName`
+- `eventHubNamespaceName`
+- `languageServiceName`
+- `aiContentSafetyName`
+- Azure OpenAI account names under `openAiInstances`
+- Azure AI Search service names under `aiSearchInstances`
+
+> 💡 **Tip**: Use environment and region suffixes (e.g., `-lz4-swc`) to avoid naming collisions.
+
+##### Networking Configuration
+Review and update networking parameters as needed:
+- `vnetAddressPrefix`
+- `apimSubnetName`, `apimSubnetPrefix`
+- `privateEndpointSubnetName`, `privateEndpointSubnetPrefix`
+- `functionAppSubnetName`, `functionAppSubnetPrefix`
+
+---
+
+### 🚀 Step 2: Run Deployment
+
+After updating `parameters.json`, execute the deployment script:
+
+```bash
+python deploy.py
+
+
+### 📋 What the Deployment Script Does
+
+The deployment script performs the following actions:
+
+- Creates or selects the **AZD environment** using `environmentName`
+- Loads **all configuration values directly from `parameters.json`**
+- Sets **AZD environment variables automatically** (no local key-values)
+- Validates **Azure subscription** and **resource scope**
+- Deploys infrastructure using **modular Bicep templates**
+
+---
+
+### ✅ Deployment Outcome
+
+A successful deployment provisions the following components:
+
+- **AI Hub Gateway** (API Management–based)
+- **Azure OpenAI**, **Azure AI Search**, **Language**, and **Content Safety** services
+- **Secure networking** with Private Endpoints
+- **Centralized observability** using Log Analytics and Application Insights
+- **Governance-ready AI access** aligned with **AI Citadel Governance Hub (Preview)**
+
+---
+
+### 🧪 Optional Validation
+
+To verify the AZD environment values, run:
+
+```bash
+azd env get-values
+
+Confirm that all values originate from parameters.json and that no local overrides are present.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 🚀 AI Hub Gateway Landing Zone
 
 > ## 🏰 **NEW: AI Citadel Governance Hub v1 - Now in Preview!**

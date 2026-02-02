@@ -3,10 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "environmentName": {
-      "value": "dev"
+      "value": "hbai-lz4"
     },
     "location": {
       "value": "swedencentral"
+    },
+    "azureSubscriptionId": {
+      "value": "9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583"
     },
     "tags": {
       "value": {
@@ -17,13 +20,19 @@
       }
     },
     "resourceGroupName": {
-      "value": "rg-hbai-lz3"
+      "value": "rg-hbai-lz4"
     },
     "identityName": {
       "value": ""
     },
     "apimServiceName": {
-      "value": ""
+      "value": "apim-gpeat2any457u"
+    },
+    "apimGatewayUrl": {
+      "value": "https://apim-gpeat2any457u.azure-api.net"
+    },
+    "apimAoiPath": {
+      "value": "openai"
     },
     "logAnalyticsName": {
       "value": ""
@@ -68,16 +77,16 @@
       "value": false
     },
     "existingVnetRG": {
-      "value": "rg-hbai-lz2"
+      "value": "rg-hbai-lz3"
     },
     "apimSubnetName": {
-      "value": ""
+      "value": "apim-subnet"
     },
     "privateEndpointSubnetName": {
-      "value": ""
+      "value": "private-endpoint-subnet"
     },
     "functionAppSubnetName": {
-      "value": ""
+      "value": "functionapp-subnet"
     },
     "apimNsgName": {
       "value": ""

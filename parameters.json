@@ -2,12 +2,19 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+
     "environmentName": {
-      "value": "dev"
+      "value": "hbai-lz4"
     },
+
     "location": {
       "value": "swedencentral"
     },
+
+    "azureSubscriptionId": {
+      "value": "9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583"
+    },
+
     "tags": {
       "value": {
         "azd-env-name": "dev",
@@ -18,47 +25,69 @@
     },
 
     "resourceGroupName": {
-      "value": "rg-hbai-lz3"
+      "value": "rg-hbai-lz4"
     },
+
     "identityName": {
       "value": ""
     },
+
     "apimServiceName": {
-      "value": ""
+      "value": "apim-gpeat2any457u"
     },
+
+    "apimGatewayUrl": {
+      "value": "https://apim-gpeat2any457u.azure-api.net"
+    },
+
+    "apimAoiPath": {
+      "value": "openai"
+    },
+
     "logAnalyticsName": {
       "value": ""
     },
+
     "applicationInsightsDashboardName": {
       "value": ""
     },
+
     "funcAplicationInsightsDashboardName": {
       "value": ""
     },
+
     "applicationInsightsName": {
       "value": ""
     },
+
     "funcApplicationInsightsName": {
       "value": ""
     },
+
     "eventHubNamespaceName": {
       "value": ""
     },
+
     "cosmosDbAccountName": {
       "value": ""
     },
+
     "usageProcessingFunctionAppName": {
       "value": ""
     },
+
     "usageProcessingLogicAppName": {
       "value": ""
     },
+
     "storageAccountName": {
       "value": ""
     },
+
     "languageServiceName": {
       "value": ""
     },
+
     "aiContentSafetyName": {
       "value": ""
     },
@@ -66,32 +95,39 @@
     "vnetName": {
       "value": "sw-hbai-vnet-01"
     },
+
     "useExistingVnet": {
       "value": false
     },
+
     "existingVnetRG": {
-      "value": "rg-hbai-lz2"
+      "value": "rg-hbai-lz3"
     },
 
     "apimSubnetName": {
-      "value": ""
+      "value": "apim-subnet"
     },
+
     "privateEndpointSubnetName": {
-      "value": ""
+      "value": "private-endpoint-subnet"
     },
+
     "functionAppSubnetName": {
-      "value": ""
+      "value": "functionapp-subnet"
     },
 
     "apimNsgName": {
       "value": ""
     },
+
     "privateEndpointNsgName": {
       "value": ""
     },
+
     "functionAppNsgName": {
       "value": ""
     },
+
     "apimRouteTableName": {
       "value": ""
     },
@@ -99,12 +135,15 @@
     "vnetAddressPrefix": {
       "value": "172.18.220.0/24"
     },
+
     "apimSubnetPrefix": {
       "value": "172.18.220.0/26"
     },
+
     "privateEndpointSubnetPrefix": {
       "value": "172.18.220.64/26"
     },
+
     "functionAppSubnetPrefix": {
       "value": "172.18.220.128/26"
     },
@@ -112,6 +151,7 @@
     "dnsZoneRG": {
       "value": ""
     },
+
     "dnsSubscriptionId": {
       "value": ""
     },
@@ -119,30 +159,39 @@
     "storageBlobPrivateEndpointName": {
       "value": ""
     },
+
     "storageFilePrivateEndpointName": {
       "value": ""
     },
+
     "storageTablePrivateEndpointName": {
       "value": ""
     },
+
     "storageQueuePrivateEndpointName": {
       "value": ""
     },
+
     "cosmosDbPrivateEndpointName": {
       "value": ""
     },
+
     "eventHubPrivateEndpointName": {
       "value": ""
     },
+
     "openAiPrivateEndpointName": {
       "value": ""
     },
+
     "languageServicePrivateEndpointName": {
       "value": ""
     },
+
     "aiContentSafetyPrivateEndpointName": {
       "value": ""
     },
+
     "apimV2PrivateEndpointName": {
       "value": ""
     },
@@ -150,27 +199,35 @@
     "apimNetworkType": {
       "value": "External"
     },
+
     "apimV2UsePrivateEndpoint": {
       "value": true
     },
+
     "apimV2PublicNetworkAccess": {
       "value": true
     },
+
     "openAIExternalNetworkAccess": {
       "value": "Disabled"
     },
+
     "cosmosDbPublicAccess": {
       "value": "Enabled"
     },
+
     "eventHubNetworkAccess": {
       "value": "Enabled"
     },
+
     "languageServiceExternalNetworkAccess": {
       "value": "Disabled"
     },
+
     "aiContentSafetyExternalNetworkAccess": {
       "value": "Disabled"
     },
+
     "useAzureMonitorPrivateLinkScope": {
       "value": true
     },
@@ -178,24 +235,31 @@
     "createAppInsightsDashboard": {
       "value": false
     },
+
     "provisionFunctionApp": {
       "value": false
     },
+
     "enableAIModelInference": {
       "value": true
     },
+
     "enableDocumentIntelligence": {
       "value": true
     },
+
     "enableAzureAISearch": {
       "value": true
     },
+
     "enableAIGatewayPiiRedaction": {
       "value": true
     },
+
     "enableOpenAIRealtime": {
       "value": true
     },
+
     "entraAuth": {
       "value": false
     },
@@ -203,27 +267,35 @@
     "apimSku": {
       "value": "Developer"
     },
+
     "apimSkuUnits": {
       "value": 1
     },
+
     "openAiSkuName": {
       "value": "S0"
     },
+
     "deploymentCapacity": {
       "value": 20
     },
+
     "eventHubCapacityUnits": {
       "value": 1
     },
+
     "cosmosDbRUs": {
       "value": 400
     },
+
     "logicAppsSkuCapacityUnits": {
       "value": 1
     },
+
     "languageServiceSkuName": {
       "value": "S"
     },
+
     "aiContentSafetySkuName": {
       "value": "S0"
     },
@@ -231,6 +303,7 @@
     "functionContentShareName": {
       "value": "usage-function-content"
     },
+
     "logicContentShareName": {
       "value": "usage-logic-content"
     },
@@ -288,9 +361,11 @@
     "entraTenantId": {
       "value": ""
     },
+
     "entraClientId": {
       "value": ""
     },
+
     "entraAudience": {
       "value": ""
     }

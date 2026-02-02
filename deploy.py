@@ -9,44 +9,40 @@ import json
 import subprocess
 import sys
 
-
-# -------------------------------------------------
-# SET ENV VALUES HERE
-# -------------------------------------------------
-AZD_ENV_NAME = "dev"
-
-AZD_ENV_VALUES = {
-    "AZURE_ENV_NAME": "hbai-lz3",
-    "AZURE_LOCATION": "swedencentral",
-    "AZURE_SUBSCRIPTION_ID": "9ad6f7f4-b0d6-4d88-a6d1-3fc2257d5583",
-
-    "VNET_NAME": "sw-hbai-vnet-01",
-    "EXISTING_VNET_RG": "rg-hbai-lz3",
-    "VNET_ADDRESS_PREFIX": "172.18.220.0/24",
-
-    "APIM_SUBNET_NAME": "apim-subnet",
-    "APIM_SUBNET_PREFIX": "172.18.220.0/26",
-
-    "PRIVATE_ENDPOINT_SUBNET_NAME": "private-endpoint-subnet",
-    "PRIVATE_ENDPOINT_SUBNET_PREFIX": "172.18.220.64/26",
-
-    "FUNCTION_APP_SUBNET_NAME": "functionapp-subnet",
-    "FUNCTION_APP_SUBNET_PREFIX": "172.18.220.128/26",
-
-    "APIM_NAME": "apim-gpeat2any457u",
-    "APIM_GATEWAY_URL": "https://apim-gpeat2any457u.azure-api.net",
-    "APIM_AOI_PATH": "openai",
+AZD_KEY_MAP = {
+    "environmentName": "AZD_ENV_NAME",
+    "location": "AZURE_LOCATION",
+    "azureSubscriptionId": "AZURE_SUBSCRIPTION_ID",
+    "resourceGroupName": "AZURE_RESOURCE_GROUP",
 }
+PARAMS_FILE = "parameters.json"
+
+def load_parameters(params_file: str) -> dict:
+    with open(params_file, "r", encoding="utf-8") as f:
+        return json.load(f)["parameters"]
+
 
 def setup_azd_environment():
+    params = load_parameters(PARAMS_FILE)
+
+    AZD_ENV_NAME = params["environmentName"]["value"]
+
     print(f"Creating/selecting azd environment: {AZD_ENV_NAME}")
     run_cmd(["azd", "env", "new", AZD_ENV_NAME, "--no-prompt"])
     run_cmd(["azd", "env", "select", AZD_ENV_NAME])
 
     print("Setting azd environment values:")
-    for k, v in AZD_ENV_VALUES.items():
-        print(f"  {k} = {v}")
-        run_cmd(["azd", "env", "set", k, v])
+
+    for param_name, param_body in params.items():
+        value = param_body.get("value")
+
+        if not isinstance(value, (str, int, bool)):
+            continue
+
+        azd_key = AZD_KEY_MAP.get(param_name, param_name.upper())
+
+        print(f"  {azd_key} = {value}")
+        run_cmd(["azd", "env", "set", azd_key, str(value)])
 
 def load_azd_env() -> Dict[str, str]:
     result = run_cmd_capture(["azd", "env", "get-values"])
@@ -340,7 +336,7 @@ def copy_parameters_to_infra(
     with open(target_path, "w") as f:
         json.dump(parameters, f, indent=2)
 
-    print(f"Copied {source_file} → {target_path}")
+    print(f"Copied {source_file} -> {target_path}")
 
 def get_latest_subscription_deployment() -> str:
     result = run_cmd([

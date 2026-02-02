@@ -1,3 +1,6 @@
+
+# 🚀 AI Hub Gateway Landing Zone
+
 ## ⚙️ Deployment Configuration & Execution
 
 ### 🔧 Step 1: Configure `parameters.json`
@@ -83,7 +86,7 @@ azd env get-values
 Confirm that all values originate from parameters.json and that no local overrides are present.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 🚀 AI Hub Gateway Landing Zone
+
 
 > ## 🏰 **NEW: AI Citadel Governance Hub v1 - Now in Preview!**
 > 
